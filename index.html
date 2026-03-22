@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>f18699ae1.mp4</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%;
+            background: #000;
+            color: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #111;
+        }
+
+        /* === TOP BANNER → SMARTLINK DENGAN INVOKE.JS (seperti asli) === */
+        .top-smart-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 12px 10px;
+            text-align: center;
+            z-index: 30;
+            min-height: 58px;
+        }
+        #container-efb14f0744d47cae373991bdb1c42e7c {
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* === BOTTOM FIXED BANNER (smartlink + rotating text) === */
+        .bottom-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px;
+            text-align: center;
+            z-index: 25;
+        }
+        .bottom-banner a {
+            color: #60a5fa;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .bottom-banner a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-smart-banner">
+    <script async="async" data-cfasync="false" src="https://conductivebreeds.com/efb14f0744d47cae373991bdb1c42e7c/invoke.js"></script>
+    <div id="container-efb14f0744d47cae373991bdb1c42e7c"></div>
+    </div>
+
+    <!-- Video Player -->
+    <video 
+        id="video"
+        controls
+        playsinline
+        preload="metadata"
+        controlsList="nodownload nofullscreen noplaybackrate">
+        <source src="https://cdn.videy.co/f18699ae1.mp4" type="video/mp4">
+        <source src="https://cdn2.videy.co/f18699ae1.mp4" type="video/mp4">
+    </video>
+
+    <!-- ==================== BOTTOM BANNER (smartlink href + rotating) ==================== -->
+    <div class="bottom-banner">
+        <a href="https://conductivebreeds.com/hfsryann?key=eaab76900c74fd3d16fe1e0ef86fffaf" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           id="bottom-ad-link">
+            Proceed for More
+        </a>
+    </div>
+
+    <script>
+        // Rotating phrases supaya semua banner selalu fresh
+        const phrases = [
+            "Proceed for more",
+            "Get instant access",
+            "Click here to unlock now",
+            "Watch full video here",
+            "Download content now",
+            "Unlock Premium Now",
+            "Continue to Full Version",
+            "Access More Content"
+        ];
+
+        function setRandomPhrase(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.innerText = phrases[Math.floor(Math.random() * phrases.length)];
+            }
+        }
+
+        // Apply ke semua banner yang pakai href
+        setRandomPhrase('bottom-ad-link');
+
+        // Autoplay + fullscreen tap (mobile friendly)
+        const video = document.getElementById('video');
+        video.muted = true;
+        video.play().catch(() => {});
+        video.addEventListener('click', () => {
+            if (!document.fullscreenElement) video.requestFullscreen().catch(() => {});
+        });
+    </script>
+
+</body>
+</html>
